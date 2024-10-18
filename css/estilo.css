@@ -1,0 +1,181 @@
+html, body{
+    scroll-behavior: smooth;
+  }
+    body{
+        background-color: #000;
+        position: relative;
+        overflow-x: hidden;
+    }
+    model-viewer{
+        width: 100%;
+        height: 100vh;
+    }
+    .fondo{
+        background: url('../img/fondo.jpg');
+        background-position: center center;
+        background-size: cover;
+        animation:  brillo .8s infinite ease-in-out;
+        position: absolute;
+        width: 100vw;
+        height: 100%;
+    }
+    @keyframes brillo {
+        50%{
+            opacity: 0.5;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+
+  .Hotspot{
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    border: none;
+    box-sizing: border-box;
+    font-family: "Anton SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+    /*pointer-events: none;*/
+  }
+
+  .Hotspot[slot="hotspot-1"]{
+    background-color: white;
+  }
+  .Hotspot[slot="hotspot-2"]{
+    background-color: red;
+  }
+  .Hotspot[slot="hotspot-3"]{
+    background-color: blue;
+  }
+
+  .Hotspot[slot="hotspot-2"]:not([data-visibility-attribute]) {
+    background-color: red
+  }
+
+ /* .Hotspot[slot="hotspot-1"]:not([data-visibility-attribute])  .HotspotAnnotation,
+  .Hotspot[slot="hotspot-2"]:not([data-visibility-attribute])  .HotspotAnnotation{
+    display: none;
+  }*/
+
+
+
+  .HotspotAnnotation{
+    background-color: #FFF;
+    position: absolute;
+    width: 150px;
+    padding: 5px;
+    transform: translate(10px, 10px);
+    /*border-radius: 10px;
+    padding: 10px;*/
+  }
+  /* This keeps child nodes hidden while the element loads */
+  :not(:defined) > * {
+    display: none;
+  }
+
+  .boxi{
+    font-size: 11px;
+  }
+
+  .row-new{
+    text-align: center;
+    width: 100%;
+  }
+  .contenedor-lata{
+    position: relative;
+  }
+  .anima-logo {
+    float: left;
+    margin-left: 20px;
+    width: 20%; /* Ancho inicial de la imagen */
+    animation: escalar 0.5s infinite alternate; /* Duración de la animación, bucle infinito y alternancia */
+  }
+
+@keyframes escalar {
+    0% {
+        transform: scale(0.9); /* Escala inicial de la imagen */
+    }
+    100% {
+        transform: scale(1); /* Escala final de la imagen */
+    }
+}
+
+.trama{
+  background-image: url('../img/004.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+.trama img{
+  border: solid 5px #fff;
+}
+.resena h1, 
+.resena p{ color: #fff;}
+
+#down{
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+#down:hover{
+  animation: escalar 0.5s infinite alternate;
+}
+.yt-embed-holder{
+    width: 100%;
+    overflow: hidden;
+    aspect-ratio: 16/9;
+    pointer-events: none;
+}
+.yt-embed-holder iframe{
+  width: 300%;
+  height: 100%;
+  margin-left: -100%;
+}
+
+.disco{
+  rotate: -20deg;
+}
+
+.resena h1{
+  font-family: "Anton SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.resena p{
+  font-family: "Urbanist", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+footer{
+  background-color: #000;
+}
+footer p{
+  text-align: center;
+  color: #FFF;
+  font-family: "Urbanist", sans-serif;
+  font-size: 0.8rem;
+}
+footer a{
+  color: #FFF;
+  font-weight: bold;
+  background-color: #040075;
+  padding: 0.3rem;
+}
+footer a:hover{
+  text-decoration: none;
+  color: #FFF;
+  background-color: #a10e22;
+}
